@@ -1,0 +1,1037 @@
+
+/* =========================================
+   COLLECT FEE — MAIN PAGE
+========================================= */
+
+.collect-fee-page {
+  width: 100%;
+  min-width: 0;
+  padding: 26px;
+  color: #172033;
+  background: #f6f8fc;
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.collect-fee-page *,
+.collect-fee-page *::before,
+.collect-fee-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.cf-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.cf-breadcrumb {
+  margin: 0 0 9px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.cf-header h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.cf-header > div:first-child > p:last-child {
+  margin: 9px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cf-header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.cf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.4;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cf-btn svg {
+  flex-shrink: 0;
+}
+
+.cf-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cf-btn-light {
+  color: #334155;
+  background: #ffffff;
+  border-color: #dce3ed;
+}
+
+.cf-btn-light:hover:not(:disabled) {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.cf-btn-primary {
+  color: #ffffff;
+  background: #315be8;
+  border-color: #315be8;
+  box-shadow: 0 3px 7px rgb(49 91 232 / 12%);
+}
+
+.cf-btn-primary:hover:not(:disabled) {
+  background: #2549c7;
+  border-color: #2549c7;
+}
+
+.cf-btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* =========================================
+   SUCCESS AND ERROR MESSAGES
+========================================= */
+
+.cf-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.cf-alert svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cf-alert span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.cf-error {
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.cf-success {
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+/* =========================================
+   MAIN TWO-COLUMN LAYOUT
+========================================= */
+
+.cf-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.85fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.cf-layout > * {
+  min-width: 0;
+}
+
+.cf-card {
+  min-width: 0;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e7ecf4;
+  border-radius: 13px;
+  box-shadow: 0 4px 14px rgb(15 23 42 / 3%);
+}
+
+.cf-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.cf-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 19px;
+}
+
+.cf-section-heading > div:last-child {
+  min-width: 0;
+}
+
+.cf-section-heading h2,
+.cf-help-card h2,
+.cf-receipt h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.cf-section-heading p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.cf-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  border-radius: 11px;
+}
+
+.cf-icon-blue {
+  color: #315be8;
+  background: #e8efff;
+}
+
+.cf-icon-purple {
+  color: #7355d8;
+  background: #f0eaff;
+}
+
+.cf-icon-green {
+  color: #15966a;
+  background: #e2f8ee;
+}
+
+.cf-divider {
+  height: 1px;
+  margin: 25px 0;
+  background: #edf0f5;
+}
+
+/* =========================================
+   FORM LABELS AND INPUTS
+========================================= */
+
+.cf-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.cf-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 12px;
+  background: #ffffff;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cf-search:focus-within {
+  border-color: #7190f5;
+  box-shadow: 0 0 0 3px rgb(49 91 232 / 9%);
+}
+
+.cf-search svg {
+  flex-shrink: 0;
+  color: #94a3b8;
+}
+
+.cf-search input {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  color: #172033;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.cf-search input::placeholder {
+  color: #94a3b8;
+}
+
+.cf-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cf-field input,
+.cf-field select {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 12px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cf-field input:focus,
+.cf-field select:focus {
+  border-color: #7190f5;
+  box-shadow: 0 0 0 3px rgb(49 91 232 / 9%);
+}
+
+.cf-field input:disabled,
+.cf-field select:disabled {
+  color: #94a3b8;
+  background: #f8fafc;
+  cursor: not-allowed;
+}
+
+.cf-field-help {
+  display: block;
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.cf-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 15px;
+}
+
+.cf-full {
+  grid-column: 1 / -1;
+}
+
+/* =========================================
+   STUDENT SEARCH RESULTS
+========================================= */
+
+.cf-student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 340px;
+  margin-top: 14px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.cf-student {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  color: #334155;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 9px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cf-student:hover:not(:disabled) {
+  background: #f8faff;
+  border-color: #cbd8ff;
+}
+
+.cf-student-selected {
+  background: #eff4ff;
+  border-color: #8da7ff;
+}
+
+.cf-student:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cf-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  flex: 0 0 41px;
+  color: #315be8;
+  background: #e8efff;
+  border: 1px solid #dbe5ff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.cf-student-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.cf-student-details strong {
+  color: #1e293b;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.cf-student-details small {
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.cf-student-selected > svg {
+  flex-shrink: 0;
+  color: #315be8;
+}
+
+.cf-empty {
+  margin: 14px 0;
+  padding: 16px;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px dashed #dbe3ef;
+  border-radius: 9px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.cf-selected {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 13px;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 9px;
+}
+
+.cf-selected > svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cf-selected strong {
+  display: block;
+  color: #166534;
+  font-size: 12px;
+}
+
+.cf-selected p {
+  margin: 5px 0 0;
+  color: #15803d;
+  font-size: 10px;
+}
+
+/* =========================================
+   NO OUTSTANDING FEES
+========================================= */
+
+.cf-no-assignments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 18px;
+  text-align: center;
+  background: #f8fafc;
+  border: 1px dashed #dbe3ef;
+  border-radius: 10px;
+}
+
+.cf-no-assignments > svg {
+  color: #94a3b8;
+}
+
+.cf-no-assignments strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+.cf-no-assignments p {
+  max-width: 350px;
+  margin: 0;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   OUTSTANDING FEE ASSIGNMENTS
+========================================= */
+
+.cf-assignment-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cf-assignment-toolbar > span {
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.cf-assignment-toolbar > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cf-assignment-toolbar button {
+  padding: 0;
+  color: #315be8;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.cf-assignment-toolbar button:disabled {
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.cf-assignment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.cf-assignment-option {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  padding: 13px;
+  background: #ffffff;
+  border: 1px solid #e3e9f2;
+  border-radius: 9px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cf-assignment-option:hover {
+  background: #fbfcff;
+  border-color: #cbd8ff;
+}
+
+.cf-assignment-checked {
+  background: #f5f8ff;
+  border-color: #a6baff;
+}
+
+.cf-assignment-option input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  accent-color: #315be8;
+  cursor: pointer;
+}
+
+.cf-assignment-option input:disabled {
+  cursor: not-allowed;
+}
+
+.cf-assignment-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.cf-assignment-info strong {
+  color: #1e293b;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.cf-assignment-info small {
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.cf-assignment-balance {
+  flex-shrink: 0;
+  color: #b45309;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* =========================================
+   PAYMENT SUMMARY
+========================================= */
+
+.cf-amount-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+.cf-amount-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e7ecf4;
+  border-radius: 9px;
+}
+
+.cf-amount-summary span {
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.cf-amount-summary strong {
+  color: #172033;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.cf-amount-summary .cf-green-text {
+  color: #15803d;
+}
+
+.cf-amount-summary .cf-orange-text {
+  color: #b45309;
+}
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.cf-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 23px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f5;
+}
+
+.cf-actions .cf-btn-primary {
+  min-height: 43px;
+}
+
+/* =========================================
+   COLLECTION GUIDE
+========================================= */
+
+.cf-help-card {
+  padding: 22px;
+}
+
+.cf-help-card > .cf-icon {
+  margin-bottom: 15px;
+}
+
+.cf-help-card h2 {
+  margin-bottom: 14px;
+}
+
+.cf-help-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding-left: 19px;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.cf-help-card li::marker {
+  color: #315be8;
+}
+
+/* =========================================
+   PAYMENT RECEIPT
+========================================= */
+
+.cf-receipt {
+  padding: 22px;
+}
+
+.cf-receipt-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.cf-receipt-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.5px;
+}
+
+.cf-receipt h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.cf-receipt-number {
+  margin: 8px 0 18px;
+  padding: 10px;
+  color: #315be8;
+  background: #eff4ff;
+  border: 1px dashed #c7d5ff;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.cf-receipt-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.cf-receipt-row span {
+  flex: 1;
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.cf-receipt-row strong {
+  max-width: 60%;
+  color: #1e293b;
+  text-align: right;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.cf-receipt-allocation-heading {
+  margin-top: 19px;
+  padding: 11px 0;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.cf-receipt-allocation-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-receipt-allocation {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.cf-receipt-allocation > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.cf-receipt-allocation > div:last-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.cf-receipt-allocation strong {
+  color: #1e293b;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.cf-receipt-allocation small {
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.cf-receipt-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 15px;
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 9px;
+}
+
+.cf-receipt-total span {
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.cf-receipt-total strong {
+  font-size: 17px;
+  font-weight: 850;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.cf-print-btn {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.cf-receipt-note {
+  margin: 13px 0 0;
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1200px) {
+  .cf-layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+    gap: 16px;
+  }
+
+  .cf-card {
+    padding: 18px;
+  }
+
+  .cf-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 950px) {
+  .cf-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cf-side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+@media (max-width: 650px) {
+  .collect-fee-page {
+    padding: 14px;
+  }
+
+  .cf-header {
+    flex-direction: column;
+  }
+
+  .cf-header h1 {
+    font-size: 23px;
+  }
+
+  .cf-header-actions {
+    width: 100%;
+  }
+
+  .cf-header-actions .cf-btn {
+    flex: 1;
+  }
+
+  .cf-card,
+  .cf-help-card,
+  .cf-receipt {
+    padding: 15px;
+  }
+
+  .cf-section-heading {
+    align-items: flex-start;
+  }
+
+  .cf-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cf-full {
+    grid-column: auto;
+  }
+
+  .cf-amount-summary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cf-assignment-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cf-assignment-option {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .cf-assignment-balance {
+    margin-left: 27px;
+  }
+
+  .cf-side {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cf-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .cf-actions .cf-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   PRINT RECEIPT ONLY
+========================================= */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  #cf-receipt,
+  #cf-receipt * {
+    visibility: visible !important;
+  }
+
+  #cf-receipt {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    padding: 22px !important;
+    color: #111827 !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  #cf-receipt .cf-print-btn {
+    display: none !important;
+  }
+
+  #cf-receipt .cf-receipt-total,
+  #cf-receipt .cf-receipt-number,
+  #cf-receipt .cf-receipt-badge {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  #cf-receipt .cf-receipt-row,
+  #cf-receipt .cf-receipt-allocation {
+    break-inside: avoid;
+  }
+}

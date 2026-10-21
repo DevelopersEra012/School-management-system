@@ -1,0 +1,13 @@
+MERGE THESE FIELDS INTO YOUR EXISTING MONGOOSE STUDENT SCHEMA.
+Do not replace your whole schema with this snippet.
+
+isDeleted: {
+  type: Boolean,
+  default: false,
+},
+deletedAt: {
+  type: Date,
+  default: null,
+},
+
+Example location: add these alongside your other top-level Student schema fields.

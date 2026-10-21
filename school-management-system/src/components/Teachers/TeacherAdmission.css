@@ -1,0 +1,320 @@
+
+.teacher-admission-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7fb;
+  color: #202a3c;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.ta-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.ta-eyebrow {
+  color: #5851d8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.ta-heading h1 {
+  margin: 7px 0;
+  font-size: 30px;
+  letter-spacing: -0.7px;
+}
+
+.ta-heading p,
+.ta-section-heading p {
+  margin: 0;
+  color: #8993a6;
+  font-size: 13px;
+}
+
+.ta-back-button,
+.ta-reset-button,
+.ta-submit-button,
+.ta-upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ta-back-button,
+.ta-reset-button {
+  border: 1px solid #e0e5ef;
+  background: white;
+  color: #526078;
+}
+
+.ta-form {
+  display: grid;
+  gap: 20px;
+}
+
+.ta-card {
+  padding: 25px;
+  background: white;
+  border: 1px solid #edf0f6;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #17255406;
+}
+
+.ta-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 24px;
+}
+
+.ta-section-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #eeedff;
+  color: #554be0;
+}
+
+.ta-section-heading h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.ta-photo-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px dashed #c8ccf7;
+  border-radius: 12px;
+  background: #f9f9ff;
+}
+
+.ta-photo-placeholder,
+.ta-photo-preview {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+.ta-photo-placeholder {
+  background: #e9eaff;
+  color: #6259dd;
+}
+
+.ta-photo-preview {
+  object-fit: cover;
+}
+
+.ta-photo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.ta-photo-info strong {
+  font-size: 14px;
+}
+
+.ta-photo-info span,
+.ta-photo-info small {
+  color: #8993a6;
+  font-size: 11px;
+}
+
+.ta-upload-button {
+  position: relative;
+  overflow: hidden;
+  background: #eeedff;
+  color: #5148d7;
+}
+
+.ta-upload-button input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.ta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ta-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #465269;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ta-grid input,
+.ta-grid select {
+  width: 100%;
+  min-width: 0;
+  height: 43px;
+  padding: 0 12px;
+  border: 1px solid #e1e6ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #263247;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.ta-grid input:focus,
+.ta-grid select:focus {
+  border-color: #817cf0;
+  box-shadow: 0 0 0 3px #6366f11a;
+}
+
+.ta-grid small {
+  color: #929bad;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.ta-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 18px 0;
+}
+
+.ta-submit-button {
+  border: none;
+  background: #5148dc;
+  color: white;
+  padding: 12px 20px;
+  box-shadow: 0 5px 13px #5148dc25;
+}
+
+.ta-submit-button:hover {
+  background: #4338ca;
+}
+
+.ta-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ta-success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  background: #e9f9ef;
+  color: #167447;
+  border: 1px solid #c6efd7;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.ta-success button {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  background: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .teacher-admission-page {
+    padding: 16px;
+  }
+
+  .ta-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ta-heading h1 {
+    font-size: 25px;
+  }
+
+  .ta-card {
+    padding: 18px;
+  }
+
+  .ta-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ta-photo-area {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 13px;
+  }
+
+  .ta-photo-placeholder,
+  .ta-photo-preview {
+    width: 75px;
+    height: 75px;
+  }
+
+  .ta-form-actions {
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+
+
+
+.ta-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.ta-error button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.ta-upload-button {
+  cursor: pointer;
+}
